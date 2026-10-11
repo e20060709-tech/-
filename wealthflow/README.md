@@ -1,16 +1,28 @@
-# React + Vite
+# WealthFlowPro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + Vite personal finance dashboard.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Production build
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the Oxlint configuration
+## GitHub Pages deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Pushing to `main` automatically builds and deploys `wealthflow/` to GitHub Pages
+through `.github/workflows/deploy-pages.yml`. The workflow enables Pages when
+the repository and account plan permit it. If Pages is not available, check
+**Settings → Pages** and use **GitHub Actions** as the build and deployment
+source.
+
+The app stores editable assets in the current browser's local storage. They are
+not uploaded or synchronized between devices.
